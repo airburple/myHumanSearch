@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div ng-controller="humanCtrl">
+    <div class="divList">
+        <p><b><i>Human List</i></b></p>
+        <table class="table table-hover">
+            <tr>
+                <td><b>ID</b></td>
+                <td><b>Name</b></td>
+                <td><b>Address</b></td>
+                <td><b>Age</b></td>
+                <td><b>Hair</b></td>
+                <td><b>Interests</b></td>
+                <td><b>FileName</b></td>
+                <td><b>Action</b></td>
+
+            </tr>
+            <tr ng-repeat="human in humans">
+                <td>
+                    {{human.Id}}
+                </td>
+                <td>
+                    {{human.Name}}
+                </td>
+                <td>
+                    {{human.Address}}
+                </td>
+                <td>
+                    {{human.Age}}
+                </td>
+                <td>
+                    {{human.Hair}}
+                </td>
+                <td>
+                    {{human.Interests}}
+                </td>
+                <td>
+                    {{human.FileName}}
+                </td>
+                <td>
+                    <span ng-click="editHuman(human)" class="btn btn-primary">Edit</span>
+                    <span ng-click="deleteHuman(human)" class="btn btn-danger">Delete</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <span ng-click="AddHumanDiv()" class="btn btn-default">
+        Add Human
+    </span>
+    <div ng-show="divHuman">
+        <p class="divHead"></p>
+        <table class="table">
+            <tr>
+                <td><b><i>{{Action}} Human</i></b></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><b>Id</b></td>
+                <td>
+                    <input type="text" disabled="disabled" ng-model="humanId" />
+                </td>
+                <td><b>Name</b></td>
+                <td>
+                    <input type="text" ng-model="humanName" />
+                </td>
+            </tr>
+            <tr>
+                <td><b>Address</b></td>
+                <td>
+                    <input type="text" ng-model="humanAddress" />
+                </td>
+                <td><b>Age</b></td>
+                <td>
+                    <input type="text" ng-model="humanAge" />
+                </td>
+            </tr>
+            <tr>
+                <td><b>Hair</b></td>
+                <td>
+                    <input type="text" ng-model="humanHair" />
+                </td>
+                <td><b>Interests</b></td>
+                <td>
+                    <input type="text" ng-model="humanInterests" />
+                </td>
+                <td>
+                    <input type="button" class="btn btn-default" value="Save" ng-click="AddUpdateHuman()" />
+                    <input type="button" class="btn btn-danger" value="Cancel" ng-click="Cancel()" />
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
