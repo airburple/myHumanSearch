@@ -5,7 +5,7 @@
         return $http.get("Home/GetAllHumans");
     };
 
-    // get Human by bookId
+    // get Human by humanId
     this.getHuman = function (humanId) {
         var response = $http({
             method: "post",
