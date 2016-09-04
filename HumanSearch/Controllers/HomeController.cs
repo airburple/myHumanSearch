@@ -26,7 +26,7 @@ namespace HumanSearch.Controllers
             }
         }
         //GET: Human by Id
-        public JsonResult GetBookById(string id)
+        public JsonResult GetHumanById(string id)
         {
             using (HumanDBContext contextObj = new HumanDBContext())
             {

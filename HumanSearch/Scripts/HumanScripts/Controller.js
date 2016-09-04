@@ -14,6 +14,8 @@
 
     $scope.editHuman = function (human) {
         var getHumanData = humanAJService.getHuman(human.Id);
+
+
         getHumanData.then(function (_human) {
             $scope.human = _human.data;
             $scope.humanId = human.Id;
@@ -25,6 +27,7 @@
             $scope.humanFileName = human.FileName;
             $scope.Action = "Update";
             $scope.divHuman = true;
+            
         }, function () {
             alert('Error in getting human records');
         });

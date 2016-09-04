@@ -1,12 +1,13 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Human Search";
 }
 <div ng-controller="humanCtrl">
-    <h3>Exact or contains filter</h3>
-    Filter name or address: <input type="text" ng-click= "myFilter = '!'"ng-model="mysearch.Name" />
-    <span ng-click= "myFilter = mysearch">ClickMe</span>
+    <h2>WELCOME TO HUMAN SEARCH</h2>
+    <h3>Search Your Favorite Humans</h3>
+    Search using any part of a name: <input type="text" ng-click= "myFilter = '!'"ng-model="mysearch.Name" />
+    <span class="btn btn-primary" ng-click= "myFilter = mysearch">Search</span>
 
-        <div class="divList">
+        <div ng-init="myFilter = '!'" class="divList">
             <p><b><i>Human List</i></b></p>
             <table class="table table-hover">
                 <tr>
@@ -49,7 +50,7 @@
                 </tr>
             </table>
         </div>
-        <span ng-click="AddHumanDiv()" class="btn btn-default">
+        <span ng-click="AddHumanDiv()"  class="btn btn-default">
             Add Human
         </span>
         <div ng-show="divHuman">
@@ -67,22 +68,24 @@
                     <td>
                         <input type="text" ng-model="humanName" />
                     </td>
-                </tr>
-                <tr>
                     <td><b>Address</b></td>
                     <td>
                         <input type="text" ng-model="humanAddress" />
                     </td>
+                </tr>
+                <tr>
+
                     <td><b>Age</b></td>
                     <td>
                         <input type="text" ng-model="humanAge" />
                     </td>
-                </tr>
-                <tr>
                     <td><b>Hair</b></td>
                     <td>
                         <input type="text" ng-model="humanHair" />
                     </td>
+                </tr>
+                <tr>
+
                     <td><b>Interests</b></td>
                     <td>
                         <input type="text" ng-model="humanInterests" />
@@ -91,6 +94,8 @@
                     <td>
                         <input type="text" ng-model="humanFileName" />
                     </td>
+                </tr>
+                <tr>
                     <td>
                         <input type="button" class="btn btn-default" value="Save" ng-click="AddUpdateHuman()" />
                         <input type="button" class="btn btn-danger" value="Cancel" ng-click="Cancel()" />
