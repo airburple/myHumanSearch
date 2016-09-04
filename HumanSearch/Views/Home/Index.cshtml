@@ -16,7 +16,7 @@
                     <td><b>Age</b></td>
                     <td><b>Hair</b></td>
                     <td><b>Interests</b></td>
-                    <td><b>FileName</b></td>
+                    <td><b>Photo</b></td>
                     <td><b>Action</b></td>
 
                 </tr>
@@ -40,7 +40,7 @@
                         {{human.Interests}}
                     </td>
                     <td>
-                        {{human.FileName}}
+                        <img src="{{human.FileName}}" width="100" height="100" />
                     </td>
                     <td>
                         <span ng-click="editHuman(human)" class="btn btn-primary">Edit</span>
@@ -62,10 +62,7 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td><b>Id</b></td>
-                    <td>
-                        <input type="text" disabled="disabled" ng-model="humanId" />
-                    </td>
+
                     <td><b>Name</b></td>
                     <td>
                         <input type="text" ng-model="humanName" />
