@@ -1,6 +1,8 @@
 ﻿app.controller("humanCtrl", function ($scope, humanAJService) {
     $scope.divHuman = false;
+    $scope.loadingScreen = false;
     GetAllHumans();
+    $scope.loadingScreen = true;
     //To Get all human records  
     function GetAllHumans() {
         debugger;
@@ -70,6 +72,7 @@
         ClearFields();
         $scope.Action = "Add";
         $scope.divHuman = true;
+        $scope.loadingScreen = false;
     }
 
     $scope.deleteHuman = function (human) {

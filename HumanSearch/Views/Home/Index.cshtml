@@ -6,6 +6,7 @@
     <h3>Search Your Favorite Humans</h3>
     Search using any part of a name: <input type="text" ng-click= "myFilter = '!'"ng-model="mysearch.Name" />
     <span class="btn btn-primary" ng-click= "myFilter = mysearch">Search</span>
+    <div><img id="mySpinner" src="~/Imgs/InternetSlowdown_Day.gif" ng-show="loadingScreen" /></div>
 
         <div ng-init="myFilter = '!'" class="divList">
             <p><b><i>Human List</i></b></p>

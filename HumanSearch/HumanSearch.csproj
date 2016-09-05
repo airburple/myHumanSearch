@@ -144,12 +144,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\InternetSlowdown_Day.gif" />
-    <Content Include="Images\smile-01.jpg" />
-    <Content Include="Images\smile-02.jpg" />
-    <Content Include="Images\smile-03.jpg" />
-    <Content Include="Images\smile-04.jpg" />
-    <Content Include="Images\smile-05.jpg" />
+    <Content Include="Imgs\InternetSlowdown_Day.gif" />
+    <Content Include="Imgs\smile-01.jpg" />
+    <Content Include="Imgs\smile-02.jpg" />
+    <Content Include="Imgs\smile-03.jpg" />
+    <Content Include="Imgs\smile-04.jpg" />
+    <Content Include="Imgs\smile-05.jpg" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
@@ -962,8 +962,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\version.json" />
   </ItemGroup>
