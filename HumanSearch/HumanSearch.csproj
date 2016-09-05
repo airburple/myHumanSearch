@@ -144,6 +144,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\InternetSlowdown_Day.gif" />
+    <Content Include="Images\smile-01.jpg" />
+    <Content Include="Images\smile-02.jpg" />
+    <Content Include="Images\smile-03.jpg" />
+    <Content Include="Images\smile-04.jpg" />
+    <Content Include="Images\smile-05.jpg" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
