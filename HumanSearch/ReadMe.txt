@@ -1,4 +1,7 @@
-﻿To run the selenium test run this project first and then run the 
+﻿I seeded with the following first names:
+Carla , Ben, Susan, and James
+
+To run the selenium test run this project first and then run the 
 Selenium Test project seperately. Firefox must be installed.
 
 To get the data connection to show up uncomment the Web.config
