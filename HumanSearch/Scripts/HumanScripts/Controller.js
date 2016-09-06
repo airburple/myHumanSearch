@@ -1,8 +1,10 @@
-﻿app.controller("humanCtrl", function ($scope, humanAJService) {
+﻿app.controller("humanCtrl", function ($scope, $timeout, humanAJService) {
     $scope.divHuman = false;
     $scope.loadingScreen = false;
+    $scope.divList = true;
+
     GetAllHumans();
-    $scope.loadingScreen = true;
+  //  $scope.loadingScreen = true;
     //To Get all human records  
     function GetAllHumans() {
         debugger;
@@ -12,6 +14,24 @@
         }, function () {
             alert('Error in getting human records');
         });
+    }
+
+
+    
+    $scope.clearMysearch = function () {
+        $scope.divList = true;
+        $scope.mysearch.Name = "";
+
+    }
+
+    $scope.SearchHuman = function () {
+        $scope.divList = true;
+        $scope.loadingScreen = true;
+        $timeout(function () {
+            $scope.loadingScreen = false;
+            $scope.divList = false;
+        }, 7000)
+
     }
 
     $scope.editHuman = function (human) {
@@ -36,6 +56,7 @@
     }
 
     $scope.AddUpdateHuman = function () {
+        $scope.divList = true;
         var Human = {
             Name: $scope.humanName,
             Address: $scope.humanAddress,
@@ -99,3 +120,25 @@
         $scope.divHuman = false;
     };
 });
+
+
+/**
+app.controller("humanCtrl", function ($scope, $timeout) {
+    $scope.loadingScreen = false;
+
+
+    $scope.SearchHuman = function () {
+
+        $scope.loadingScreen = true;
+        $timeout(function () {
+            $scope.loadingScreen = false;
+            GetAllHumans();
+            // myFilter =$scope.mysearch
+        }, 5000)
+
+    }
+
+
+});
+
+**/
