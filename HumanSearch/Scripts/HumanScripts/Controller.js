@@ -30,7 +30,7 @@
         $timeout(function () {
             $scope.loadingScreen = false;
             $scope.divList = false;
-        }, 3000)
+        }, 5000)
 
     }
 
