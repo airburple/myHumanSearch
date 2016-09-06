@@ -10,6 +10,7 @@ namespace HumanSearch.Models
     {
         public HumanDBContext() : base("HumanDBContext")
         {
+            Database.SetInitializer<HumanDBContext>(new CreateDatabaseIfNotExists<HumanDBContext>());
         }
 
         public DbSet<Human> human { get; set; }

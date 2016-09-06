@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HumanSearch.Models
 {
-    public class HumansInitializer : System.Data.Entity.CreateDatabaseIfNotExists<HumanDBContext>
+    public class HumansInitializer : System.Data.Entity.DropCreateDatabaseAlways<HumanDBContext>
     {
 
         protected override void Seed(HumanDBContext context)
