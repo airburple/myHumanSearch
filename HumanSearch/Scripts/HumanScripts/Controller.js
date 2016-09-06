@@ -30,11 +30,12 @@
         $timeout(function () {
             $scope.loadingScreen = false;
             $scope.divList = false;
-        }, 7000)
+        }, 3000)
 
     }
 
     $scope.editHuman = function (human) {
+        $scope.divList = true;
         var getHumanData = humanAJService.getHuman(human.Id);
 
 
@@ -49,6 +50,7 @@
             $scope.humanFileName = human.FileName;
             $scope.Action = "Update";
             $scope.divHuman = true;
+            
             
         }, function () {
             alert('Error in getting human records');
@@ -74,6 +76,7 @@
                 GetAllHumans();
                 alert(msg.data);
                 $scope.divHuman = false;
+                $scope.divList = false;
             }, function () {
                 alert('Error in updating human record');
             });
@@ -90,6 +93,7 @@
     }
 
     $scope.AddHumanDiv = function () {
+        $scope.divList = true;
         ClearFields();
         $scope.Action = "Add";
         $scope.divHuman = true;

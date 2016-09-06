@@ -6,6 +6,9 @@
     <h3>Search Your Favorite Humans</h3>
     Search using any part of a name: <input type="text" ng-click= "clearMysearch()" ng-model="mysearch.Name" />
     <span class="btn btn-primary" ng-mouseup="SearchHuman()" ng-click= "myFilter = mysearch">Search</span>
+        Don't see the Patient on the list?  <span ng-click="AddHumanDiv()" class="btn btn-default">
+        Add Patient
+    </span>
     <div><img id="mySpinner" src="~/Imgs/InternetSlowdown_Day.gif" ng-show="loadingScreen" /></div>
 
         <div ng-hide="divList">
@@ -51,9 +54,7 @@
                 </tr>
             </table>
         </div>
-        <span ng-click="AddHumanDiv()"  class="btn btn-default">
-            Add Human
-        </span>
+
         <div ng-show="divHuman">
 
             <p class="divHead"></p>
